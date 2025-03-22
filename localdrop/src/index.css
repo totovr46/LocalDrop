@@ -1,0 +1,460 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7389FF; /* Sfondo blu dell'app */
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .app-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #7389FF;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Change this from center/default to align to the top */
+    padding: 15px 20px 40px 0px; /* Increase bottom padding and reduce top padding */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    color: #333;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar a.active {
+    color: #007bff;
+  }
+  
+  /* Search bar */
+  .search-bar {
+    width: 82.5%;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #000; /* Aggiunge un bordo nero sottile */
+    margin-bottom: 40px ;
+  }
+  
+  /* Home page */
+  .categorie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+    margin-top: 120px;
+
+  }
+  
+  .categoria-card {
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #000; /* Aggiunge un bordo nero sottile */
+    width: 65%; /* Add this line to make cards narrower */
+    margin: 0 auto; /* Center the cards in their grid cells */
+  }
+  
+  .interessati-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .home-container h1, .home-container h2 {
+    margin-left: 15px;
+    color: white;
+  }
+ 
+  
+  /* Prodotto */
+  .prodotto-card {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000; /* Aggiunge un bordo nero sottile */
+  }
+  
+  .prodotto-card img {
+    width: 130px;
+    height: 130px;
+    object-fit:contain;
+    margin: 0 auto;
+  }
+  
+  .prodotto-prezzo {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Pagina Categoria */
+  .categoria-container {
+    padding: 15px;
+  }
+  
+  .categoria-container h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 2.25rem;
+  }
+  .categoria-container h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: left; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 1.50rem;
+
+  }
+  
+  .sottocategorie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .sottocategoria-btn {
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    width: 65%; /* Add this line to make cards narrower */
+    margin: 0 auto; /* Center the cards in their grid cells */
+    border: 1px solid #ffffff; /* Aggiunge un bordo nero sottile */
+    
+  }
+  
+  .negozi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+
+  }
+  .negozio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(85, 102, 215, 0.377);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.negozio-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.negozio-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 17.5%;
+}
+
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+  
+  .negozio-card {
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000; /* Aggiunge un bordo nero sottile */
+  }
+  
+  .negozio-card img {
+    width: 130px;
+    height: 130px;
+    object-fit:contain;
+    margin: 0 auto;
+  }
+  
+ 
+.negozio-rating {
+  color: gold;
+  font-size: 14px;
+  margin-top: 5px; /* Riduce lo spazio tra immagine e stelle */
+  text-align: center;
+}
+  .negozio-container h1{
+    color: white;
+    margin-bottom: 10px;
+    text-align: left; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 1.75rem;
+  }
+  .negozio-container h2{
+
+    color: white;
+    margin-bottom: 10px;
+    text-align: left; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 1.50rem;
+  }
+  /* Pagina Dettaglio Prodotto */
+  .prodotto-dettaglio {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+  }
+  
+  .prodotto-dettaglio img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .prodotto-titolo {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .prodotto-prezzo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  .prodotto-descrizione {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+  
+  .prodotto-specifiche {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .consegna-box {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .btn-aggiungi {
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  /* Aggiungere al file index.css */
+
+.sottocategoria-container, .negozio-container {
+    padding: 15px;
+  }
+  
+  
+  .sottocategoria-container h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 2.25rem;
+  }
+  .sottocategoria-container h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: left; 
+    font-weight: normal; /* oppure font-weight: 500; */
+    font-size: 1.50rem;
+  }
+  
+  .prodotti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  /* Stile per i pulsanti abbigliamento */
+  .sottocategorie-bottoni {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bottone-categoria {
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Stile per la pagina prodotto dettagliata */
+  .specs-container {
+    margin: 15px 0;
+  }
+  
+  .specs-item {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Mappa container */
+  .mappa-container {
+    padding: 15px;
+  }
+  
+  .mappa-container h1 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .negozi-vicini {
+    margin-top: 20px;
+  }
+  
+  /* Miglioriamo il carrello */
+  .carrello-container {
+    padding: 15px;
+  }
+  
+  .carrello-container h1 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .carrello-prodotto {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .carrello-prodotto img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .carrello-prodotto h3 {
+    flex: 1;
+    margin: 0;
+  }
+  
+  .btn-rimuovi {
+    background-color: #FF5C5C;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .carrello-totale {
+    text-align: right;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  /* Profilare meglio la pagina utente */
+  .profilo-container {
+    padding: 15px;
+  }
+  
+  .profilo-container h1 {
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  .profilo-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .profilo-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profilo-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #7389FF;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+  }
+  
+  .profilo-nome {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  /* Pagina categorie */
